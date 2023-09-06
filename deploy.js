@@ -5,7 +5,7 @@ dotenv.config();
 
 async function main() {
   //create provider
-  const provider = new ethers.JsonRpcProvider("HTTP://127.0.0.1:7545");
+  const provider = new ethers.JsonRpcProvider(process.env.RPC_URL);
   const wallet = new ethers.Wallet(
     process.env.PRIVATE_KEY, //PrivateKey
     provider
