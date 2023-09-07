@@ -19,6 +19,7 @@ async function main() {
   const contractFactory = new ethers.ContractFactory(abi, bin, wallet)
   const contract = await contractFactory.deploy({ gasLimit: 3e6 })
   const deployTransaction = contract.deploymentTransaction()
+  console.log(`Contract Address: ${await contract.getAddress()}`)
   // console.log("Deploy transaction");
   // console.log(deployTransaction);
 
